@@ -20,6 +20,13 @@ One final note of warning. If you plan to build this and want a high quality end
 
 ## Author
 
+Original concept:
+**Jeremy Ruth**
+**Steven Blevins**
+**Vanessa Thompson**
+**Matt Hayes**
+
+Software
 **Jeremy Ruth**
 
 ## License
