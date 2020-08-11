@@ -24,4 +24,4 @@ One final note of warning. If you plan to build this and want a high quality end
 
 ## License
 
-This project is licensed under the Creative Commons Zero v1.0 Universal license. See [License.md](https://github.com/Jeremy-Ruth/Stegonography_App/blob/master/LICENSE) for more details.
+This project is licensed under the GNU General Public License v3.0 license. See [License](https://github.com/Jeremy-Ruth/Fitness_Mirror_Software/blob/master/LICENSE) for more details.
