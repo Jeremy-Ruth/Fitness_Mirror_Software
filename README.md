@@ -40,9 +40,13 @@ When putting the pieces together I found that is was also helpful to have emulat
 
 Lastly, in the "test" folder I have left some generic image items and other files that may be useful. They are extremely basic, but can be useful in testing things like data retrieval and time lapse features. Anything else I can think of that might help I will also include in the test folder along with some information about how to use the files where meaningful to do so.
 
-## Important Note
+## Final Thoughts
+
+If you made it this far and still think this project sounds interesting, let me know if you get started and need some help! I may not be able to help you with the specifics of the problems you face, but I may have some insight into a good approach, what to try, or what tools you may need from my own experiences. Also, I do plan to return to this project when time allows. I would like to take what I have learned in the initial attempt to come up with something more practical as a user device, and that has more of the features that would make it what it was mean to be. Good luck!
 
 ## Version History
+
+* **Alpha Version 1** - Basic implementation of core features and minimal external sensor devices (a bathroom scale and camera).
 
 ## Author(s)
 
