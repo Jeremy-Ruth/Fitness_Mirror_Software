@@ -26,13 +26,19 @@ As implemented the software components include a database, Java code for the pho
 
 ## Getting Started / Installation
 
+There is no simple place to start with this project to be honest. I would recommend as the initial step perhaps planning the scope of features you want to include in your fitness mirror. This will have a large effect on what you will need to start your build. There are a lot of creative ways to add sensors and features. Some common sensors that could be considered for integration in addition to a bathroom scale would be a blood pressure cuff and oxygen sensor. Infrared cameras can even be used to estimate BMI with the right approach and programming. One cost effective way to approach this is using an XBox Kinect sensor bar. There are some guides about how to use a Kinect for BMI calculations online. Depending on your skill set, information available, and tools on hand you may also want to think about whether you prefer to try to add sensors by reverse engineering hardware and adding communication components, reverse engineer software from existing smart devices to try to grab the signal they transfer with your mirror, or build a device from scratch so you have complete control over every aspect of it. None of these are easy and require a lot of patience to be successful. It wasn't the case at the time I built my prototype, but there may even be more DIY friendly health sensors on the market now that provide a built in means of integrating their devices into custom setups.
+
+Once you think you know where you want to go with your build, I can only suggest that you look through the code that can be found in the SRC folder for all of the various aspects of the software. I cannot provid a ready to go option because so much of this process was custom and specific to the exact hardware being used at the time. Once you have a solid understanding of the provided code however, you will being to have an idea of what you might need to change in order to work with your specific hardware. Almost anything can be changed out if you're willing to put the time into it. A lot of off cost effective off the shelf options were chosen for the original build as I wasn't even sure it would be possible for me to do what I wanted. Many were not the best choice, and there are likely even more options now. If you are having great success with your build, it may even be worth thinking about ways to abstract some of the code provided so that it is more versatile and flexible as you grow the health monitoring system.
+
+The most important advice I can give before beginning is to remember to have fun with this, and mentally prepare for a large time investment. There is a lot of cool stuff to learn if you are a tinkerer at heart, both on the hardware and software ends. Even if you aren't ultimately successful with everything you want to do, I can all but gaurantee you'll learn a lot just by trying.
+
 ## Testing
 
 ## Important Note
 
 ## Version History
 
-## Author
+## Author(s)
 
 Original concept: 
 **Jeremy Ruth, Steven Blevins, Vanessa Thompson, Matt Hayes**
