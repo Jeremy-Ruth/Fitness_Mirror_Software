@@ -34,6 +34,12 @@ The most important advice I can give before beginning is to remember to have fun
 
 ## Testing
 
+I have left most of my bug testing snippets in the code available here on Git. Much of it is still active since it is console print statements and the like to track what is happening at a given time. There are also some sections of code that are commented out that are useful for testing under certain conditions. It can also be useful to output the console statements to a log file instead once you have enough of the system running to have a need to track multiple things that may be happening at once. The major aspects of the program are all multi-threaded, so having a plan of how to track what is really going on when something isn't working properly can be tricky.
+
+When putting the pieces together I found that is was also helpful to have emulation for the phone on my main development system so that I could run the phone app and main program together. My Windows based desktop had some different requirements for communication between the phone and main software as well as beween the main software and database. Whatever direction you take it is worthwile to get your development system set up in tandem with any of your live systems, if not before. I left my alternate setup in the parts of the code and commented out the section I wasn't using at the time. These should all still be in the code now so you can get an idea of the approach.
+
+Lastly, in the "test" folder I have left some generic image items and other files that may be useful. They are extremely basic, but can be useful in testing things like data retrieval and time lapse features. Anything else I can think of that might help I will also include in the test folder along with some information about how to use the files where meaningful to do so.
+
 ## Important Note
 
 ## Version History
