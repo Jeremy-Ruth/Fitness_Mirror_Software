@@ -8,9 +8,22 @@ I did complete a physical prototype model of this at one point and when it start
 
 One final note of warning. If you plan to build this and want a high quality end product it is NOT a cheap project. The software is all open source and readily available. but components like the monitor and 2-way mirror are critical to the final product and as of yet are not cost effective when getting the ideal options. I will be adding more information in the docs section about hardware details and considerations. I will also try to discuss some of the problems I ran into to help others avoid some of the headaches where possible. I hope you enjoy this project!
 
-## Getting Started / Installation
-
 ## Prerequisites 
+
+This software is not meant to all be run on the same system. It may be possible to emulate the various pieces of hardware in order to test code and for further development, but in order to have a finished end product for the existing code base you will need:
+
+### Hardware:
+* **Mini-PC** - This is somewhat subjective depending on your needs. The mini-pc is intended to mount on or near the mirror frame. It is where the user GUI and database reside. I used a Raspberry Pi3 at the time because it was the most recent version. I would definitely go with a Pi 4 or something more powerful if you are able.
+* **Mobile Device** - The controls for the smart mirror are a GUI based phone app. This allows a user to control the mirror and to enter health data manually when needed.
+* **Sensors** - The source code provided only includes code for a bathroom scale and scripts for a Raspberry Pi camera. The location and nature of these devices are going to be heavily dependent on your build and needs. In the prototype I built, the camera was mounted on the mirror frame and the bathroom scale was a commercial scale that was modified with a custom wirless circuit in order to send weight data to the mini-pc. The Arduino code for the scale circuit is included in the source code.
+
+### Software:
+As implemented the software components include a database, Java code for the phone and mirror side applications, and arduino code. If you want to use the same tools I did the list is:
+* **Java IDE** - This is for mirror side code. I like IntelliJ, but any Java IDE will be great
+* **Android IDE** - This is for the phone side code. I used Android Studio. It is probably the safest bet to work with the project I have uploaded, but if prefer another IDE you should be able to extract the source code from the upladed project
+* **MariaDB** - This is an open source, MySQL style, database software. I have included all of files you should need to get going, but getting everything installed and ready will take a little digging into MariaDB if you have never used it. Get it [here](https://mariadb.org/download/). Info about getting started can be found [here](https://mariadb.com/get-started-with-mariadb/), and if you decide you want to use a Raspberry Pi installation instructions can be found [here](https://r00t4bl3.com/post/how-to-install-mysql-mariadb-server-on-raspberry-pi).
+
+## Getting Started / Installation
 
 ## Testing
 
@@ -20,13 +33,13 @@ One final note of warning. If you plan to build this and want a high quality end
 
 ## Author
 
-Original concept:
-**Jeremy Ruth**
-**Steven Blevins**
-**Vanessa Thompson**
+Original concept: 
+**Jeremy Ruth, **
+**Steven Blevins, **
+**Vanessa Thompson, **
 **Matt Hayes**
 
-Software
+Software: 
 **Jeremy Ruth**
 
 ## License
