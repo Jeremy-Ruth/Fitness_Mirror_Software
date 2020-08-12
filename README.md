@@ -8,7 +8,7 @@ To that end this smart mirror build focuses on interfacing with health data coll
 
 I did complete a physical prototype model of this at one point and when it started coming together it was very cool to see! At the time there was a fair amount of technology limitations (and limitations in personal knowledge). I will likely pick this project back up at some point and try to complete it. Newer technology always presents better opportunities and things may have progressed far enough along to pull off the concept in the way it was envisioned.
 
-One final note of fair warning. If you plan to build this and want a high quality end product it is NOT a cheap project. The software is all open source and readily available. but components like the monitor and 2-way mirror are critical to the final product and as of yet are not cost effective when getting the ideal options. I will be adding more information in the docs section about hardware details and considerations. I will also try to discuss some of the problems I ran into to help others avoid some of the headaches where possible. I hope you enjoy this project!
+One final note of fair warning. If you plan to build this and want a high quality end product it is NOT a cheap project. The software is all open source and readily available. Components like the monitor and 2-way mirror that are critical to the final product are, as of yet, not very cost effective when going for the ideal options. I will be adding more information in the docs section about hardware details and considerations. I will also try to discuss some of the problems I ran into to help others avoid some of the headaches where possible. I hope you enjoy this project!
 
 ## Prerequisites 
 
