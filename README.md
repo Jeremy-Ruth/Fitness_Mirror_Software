@@ -60,4 +60,4 @@ Software:
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 license. See [License](https://github.com/Jeremy-Ruth/Fitness_Mirror_Software/blob/master/LICENSE) for more details.
+This project is licensed under the GNU General Public License v3.0. See [License](https://github.com/Jeremy-Ruth/Fitness_Mirror_Software/blob/master/LICENSE) for more details.
