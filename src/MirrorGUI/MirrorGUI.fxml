@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="masterAnchorPane" prefHeight="1920.0" prefWidth="1080.0" styleClass="guiBackground" stylesheets="@MirrorGUI.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MirrorGUI.MirrorGUI_Controller">
+   <children>
+      <Pane id="LogoPane" prefHeight="1760.0" prefWidth="890.0" scaleShape="false" styleClass="logo" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="50.0" />
+      <Pane id="singleViewPane" prefHeight="1760.0" prefWidth="890.0" scaleShape="false" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <SplitPane fx:id="singleViewDataPane" dividerPositions="0.5" orientation="VERTICAL" prefHeight="1760.0" prefWidth="890.0" styleClass="infoBackground">
+              <items>
+                <AnchorPane fx:id="singleViewUserPicAnchor" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="infoBackground">
+                     <children>
+                        <HBox id="singleViewUserImageBox" fx:id="sviewUserImageBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView id="singleViewUserImage" fx:id="sviewUserImage" pickOnBounds="true" preserveRatio="true" />
+                           </children></HBox>
+                     </children></AnchorPane>
+                <AnchorPane fx:id="singleViewUserDataAnchor" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="infoBackground">
+                     <children>
+                        <Label id="usernameHeader" layoutX="30.0" layoutY="30.0" styleClass="titleTextHeader" text="Username:" />
+                        <Label id="usernameField" fx:id="sviewUserName" layoutX="340.0" layoutY="30.0" styleClass="textFields" text="No user data" />
+                        <Label id="currDateHeader" layoutX="160.0" layoutY="100.0" styleClass="titleTextHeader" text="Date:" />
+                        <Label id="currDateField" fx:id="sviewCurrDate" layoutX="340.0" layoutY="100.0" styleClass="textFields" text="for this date" />
+                        <Label id="weightHeader" layoutX="160.0" layoutY="250.0" styleClass="titleTextHeader" text="Weight:" />
+                        <Label id="weightField" fx:id="sviewWeight" layoutX="390.0" layoutY="250.0" styleClass="textFields" text="0" />
+                        <Label id="weightUnits" layoutX="490.0" layoutY="250.0" styleClass="textFields" text="lbs" />
+                        <Label id="bpSysHeader" layoutX="55.0" layoutY="325.0" styleClass="titleTextHeader" text="BP Systolic:" />
+                        <Label id="bpSysField" fx:id="sviewBPSys" layoutX="390.0" layoutY="325.0" styleClass="textFields" text="0" />
+                        <Label id="bpSysUnits" layoutX="490.0" layoutY="325.0" styleClass="textFields" text="mmHg" />
+                        <Label id="bpDiaHeader" layoutX="118.0" layoutY="400.0" styleClass="titleTextHeader" text="Diastolic:" />
+                        <Label id="bpDiaField" fx:id="sviewBPDia" layoutX="390.0" layoutY="400.0" styleClass="textFields" text="0" />
+                        <Label id="bpDiaUnits" layoutX="490.0" layoutY="400.0" styleClass="textFields" text="mmHg" />
+                        <Label id="temperatureHeader" layoutX="0.0" layoutY="475.0" styleClass="titleTextHeader" text="Temperature:" />
+                        <Label id="temperatureField" fx:id="sviewTemp" layoutX="390.0" layoutY="475.0" styleClass="textFields" text="0" />
+                        <Label id="temperatureUnits" layoutX="490.0" layoutY="475.0" styleClass="textFields" text="Fahrenheit" />
+                        <Label id="pulseHeader" layoutX="62.0" layoutY="550.0" styleClass="titleTextHeader" text="Heart Rate:" />
+                        <Label id="pulseField" fx:id="sviewPulse" layoutX="390.0" layoutY="550.0" styleClass="textFields" text="0" />
+                        <Label id="pulseUnits" layoutX="490.0" layoutY="550.0" styleClass="textFields" text="BPM" />
+                        <Label id="bmiHeader" layoutX="245.0" layoutY="625.0" styleClass="titleTextHeader" text="BMI:" />
+                        <Label id="bmiField" fx:id="sviewBMI" layoutX="390.0" layoutY="625.0" styleClass="textFields" text="0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children></Pane>
+      <Pane id="exitBttnPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="exitButton" fx:id="closeButton" layoutX="45.0" layoutY="918.0" mnemonicParsing="false" onAction="#closeButtonAction" opacity="0.1" text="EXIT" />
+         </children>
+      </Pane>
+      <Pane fx:id="wholeWindowImagePane" id="LargeImageViewPane" prefHeight="1760.0" prefWidth="890.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <AnchorPane id="LargeViewAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="1760.0" prefWidth="890.0" styleClass="infoBackground">
+               <children>
+                  <HBox fx:id="wholeWindowImageBox" id="LargeViewImageBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="wholeWindowImage" id="LargeViewImage" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

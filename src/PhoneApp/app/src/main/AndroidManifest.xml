@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fitmirrorteam.fitmirrorapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".UserLogin"
+            android:label="Fitness Mirror"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".new_user"
+            android:label="new_user"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".commandMenu"
+            android:label="@string/title_activity_command_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".enterHealthInfo"
+            android:label="@string/title_activity_enter_health_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".daily_image"
+            android:label="@string/title_activity_daily_image"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".image_time_lapse"
+            android:label="@string/title_activity_image_time_lapse"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".manage_data"
+            android:label="@string/title_activity_manage_data"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view_data"
+            android:label="@string/title_activity_view_data"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".data_analysis"
+            android:label="@string/title_activity_data_analysis"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SubActivityTemplate"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,45 @@
+.guiBackground {
+    -fx-background-image:url('../MirrorGUI/resources/MirrorBackgroundImage.jpg');
+}
+
+.logo {
+    -fx-background-image:url('../MirrorGUI/resources/FitMirrorUILogo.png');
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.infoBackground {
+    -fx-background-color: #FFF;
+}
+
+.split-pane-divider {
+    -fx-padding: 0 2 0 2 ;
+    -fx-background-color: #4E8D99;
+    -fx-background-insets: 0;
+}
+
+.titleTextHeader {
+    -fx-text-fill: #4E8D99;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 36pt;
+}
+
+.textFields {
+    -fx-text-fill: black;
+    -fx-font-weight: normal;
+    -fx-font-family: "Arial";
+    -fx-font-size: 36pt;
+}
+
+.tempBorder {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+}

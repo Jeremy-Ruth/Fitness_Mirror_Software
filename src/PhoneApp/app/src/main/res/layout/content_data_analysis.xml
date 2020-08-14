@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.data_analysis"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:showIn="@layout/activity_data_analysis">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:background="@drawable/header_line_shadow"
+            android:contentDescription="@string/header_image_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/dataAnalysisHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="82dp"
+            android:text="@string/data_analysis_header_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerShadow" />
+
+        <TextView
+            android:id="@+id/dataAnalysisDateRangeSectionHeader"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/data_analysis_date_range_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisHeader" />
+
+        <TextView
+            android:id="@+id/dataAnalysisFromEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_analysis_from_entry_header"
+            app:layout_constraintStart_toStartOf="@+id/dataAnalysisPredictionToggleText"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisDateRangeSectionHeader" />
+
+        <EditText
+            android:id="@+id/dataAnalysisFromEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/date_placeholder_text"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/dataAnalysisFromEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisDateRangeSectionHeader" />
+
+        <TextView
+            android:id="@+id/dataAnalysisToEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/data_analysis_to_entry_header"
+            app:layout_constraintStart_toStartOf="@+id/dataAnalysisFromEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisFromEntryHeader" />
+
+        <EditText
+            android:id="@+id/dataAnalysisToEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/date_placeholder_text"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/dataAnalysisToEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisFromEntryHeader" />
+
+        <TextView
+            android:id="@+id/dataAnalysisPredictionToggleText"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/data_analysis_prediction_radio_button_text"
+            app:layout_constraintEnd_toEndOf="@+id/dataAnalysisHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisToEntryHeader" />
+
+        <ToggleButton
+            android:id="@+id/dataAnalysisPredictionToggle"
+            style="@style/toggleBttnTextStyle"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/toggle_bttn_style"
+            android:onClick="predictToggle"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@+id/dataAnalysisPredictionToggleText"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisToEntryHeader" />
+
+
+        <TextView
+            android:id="@+id/dataAnalysisGraphStyleSectionHeader"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/data_analysis_graph_style_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisPredictionToggleText" />
+
+        <TextView
+            android:id="@+id/dataAnalysisLineRadioHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_analysis_line_radio_button_text"
+            app:layout_constraintStart_toStartOf="@+id/dataAnalysisGraphStyleSectionHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisGraphStyleSectionHeader" />
+
+        <RadioButton
+            android:id="@+id/dataAnalysisLineRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/dataAnalysisLineRadioHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisGraphStyleSectionHeader" />
+
+        <TextView
+            android:id="@+id/dataAnalysisBarRadioHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_analysis_bar_radio_button_text"
+            app:layout_constraintStart_toEndOf="@+id/dataAnalysisLineRadioHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisGraphStyleSectionHeader" />
+
+        <RadioButton
+            android:id="@+id/dataAnalysisBarRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/dataAnalysisBarRadioHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisGraphStyleSectionHeader" />
+
+        <Button
+            android:id="@+id/dataAnalysisSubmitButton"
+            style="@style/primaryButtonStyle"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/primary_button"
+            android:text="@string/submit_button_text"
+            app:layout_constraintStart_toStartOf="@+id/dataAnalysisPredictionToggleText"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisLineRadioHeader" />
+
+        <Button
+            android:id="@+id/dataAnalysisCancelButton"
+            style="@style/cancelButtonStyle"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/cancel_button"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintLeft_toRightOf="@+id/dataAnalysisSubmitButton"
+            app:layout_constraintTop_toBottomOf="@+id/dataAnalysisLineRadioHeader" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

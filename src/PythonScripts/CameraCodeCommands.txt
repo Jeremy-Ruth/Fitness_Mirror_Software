@@ -1,0 +1,26 @@
+From Terminal:
+
+Take a picture: sudo raspistill -o filename.jpg -t (amt. of time delay in seconds) x 1000
+Still video feed: sudo raspistill -p -o -t (amt. of time delay in seconds) x 1000 -> Select 0 for time delay to take infinite preview
+
+From Python: 
+
+Still Video feed:
+
+import picamera
+import time
+
+camera = picamera.PiCamera()
+camera.start_preview()
+time.sleep(preview time in seconds)
+camera.stop_preview()
+
+Take a picture:
+
+import picamera
+import time
+
+camera = picamera.PiCamera()
+camera.capture(filename.jpg)
+
+Sorry, just realized you shouldn't need to import time for taking a picture in python

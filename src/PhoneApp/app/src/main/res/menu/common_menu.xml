@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fitmirrorteam.fitmirrorapp.UserLogin" >
+    <item
+        android:id="@+id/menu_calibrate"
+        android:orderInCategory="100"
+        android:title="Calibrate Camera"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="101"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_exit"
+        android:orderInCategory="102"
+        android:title="Logout/Exit"
+        app:showAsAction="never" />
+</menu>

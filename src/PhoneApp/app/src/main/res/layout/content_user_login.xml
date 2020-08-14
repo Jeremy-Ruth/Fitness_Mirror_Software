@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.UserLogin"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp"
+        tools:showIn="@layout/activity_user_login">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:background="@drawable/header_line_shadow"
+            android:contentDescription="@string/header_image_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/LoginHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="81dp"
+            android:text="@string/user_login_header_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerShadow" />
+
+        <TextView
+            android:id="@+id/UserNameHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="175dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/user_login_username_header_text"
+            app:layout_constraintStart_toStartOf="@+id/userNameEntry"
+            app:layout_constraintTop_toBottomOf="@+id/LoginHeader" />
+
+        <EditText
+            android:id="@+id/userNameEntry"
+            style="@style/placeholderTextStyle"
+            android:layout_width="329dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/user_login_name_placeholder_text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="textPersonName"
+            android:labelFor="@id/userNameEntry"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserNameHeader" />
+
+        <TextView
+            android:id="@+id/UserPassHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="175dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/user_login_password_header_text"
+            app:layout_constraintStart_toStartOf="@+id/userPassEntry"
+            app:layout_constraintTop_toBottomOf="@+id/userNameEntry" />
+
+        <EditText
+            android:id="@+id/userPassEntry"
+            style="@style/placeholderTextStyle"
+            android:layout_width="329dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/user_login_password_placeholder_text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="textPersonName"
+            android:labelFor="@id/userPassEntry"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserPassHeader" />
+
+        <Button
+            android:id="@+id/submitButton_userLogin"
+            style="@style/primaryButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/primary_button"
+            android:text="@string/submit_button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userPassEntry" />
+
+        <Button
+            android:id="@+id/NewUserButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/new_user_button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submitButton_userLogin" />
+
+        <Button
+            android:id="@+id/forgotUsername"
+            android:layout_width="115dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/plain_text_button"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/user_login_forgot_username_text"
+            android:textAllCaps="false"
+            android:textColor="@color/StandardText"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/userPassEntry"
+            app:layout_constraintTop_toBottomOf="@+id/userPassEntry" />
+
+        <Button
+            android:id="@+id/forgotPassword"
+            android:layout_width="115dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/plain_text_button"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/user_login_forgot_pass_text"
+            android:textAllCaps="false"
+            android:textColor="@color/StandardText"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="@+id/userPassEntry"
+            app:layout_constraintTop_toBottomOf="@+id/userPassEntry" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

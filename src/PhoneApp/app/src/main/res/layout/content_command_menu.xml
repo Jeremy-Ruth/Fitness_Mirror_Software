@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.commandMenu"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:showIn="@layout/activity_command_menu">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:background="@drawable/header_line_shadow"
+            android:contentDescription="@string/header_image_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/commandMenuHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="266dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="82dp"
+            android:text="@string/command_menu_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerShadow" />
+
+        <Button
+            android:id="@+id/enterHealthButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/command_menu_enter_health_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commandMenuHeader" />
+
+        <Button
+            android:id="@+id/dailyImageButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/command_menu_enter_daily_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterHealthButton" />
+
+        <Button
+            android:id="@+id/imageLoopButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/command_menu_enter_time_lapse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dailyImageButton" />
+
+        <Button
+            android:id="@+id/manageDailyButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/command_menu_manage_daily"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageLoopButton" />
+
+        <Button
+            android:id="@+id/viewPersonalButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/command_menu_view_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageDailyButton" />
+
+        <Button
+            android:id="@+id/dataAnalyticsButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/command_menu_data_analysis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPersonalButton" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

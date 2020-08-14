@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.daily_image"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:showIn="@layout/activity_daily_image">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/header_image_description"
+            android:background="@drawable/header_line_shadow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/LoginHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="209dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="82dp"
+            android:text="@string/title_daily_image_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerShadow" />
+
+        <TextView
+            android:id="@+id/delayTimeHeading"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_pre_picture_delay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LoginHeader" />
+
+        <TextView
+            android:id="@+id/fiveSecondHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/title_5_seconds_header"
+            app:layout_constraintStart_toStartOf="@+id/delayTimeHeading"
+            app:layout_constraintTop_toBottomOf="@+id/delayTimeHeading" />
+
+        <RadioButton
+            android:id="@+id/fiveSecondButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/fiveSecondHeader"
+            app:layout_constraintTop_toBottomOf="@+id/delayTimeHeading" />
+
+        <TextView
+            android:id="@+id/tenSecondHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/title_10_seconds"
+            app:layout_constraintStart_toEndOf="@+id/fiveSecondHeader"
+            app:layout_constraintTop_toBottomOf="@+id/delayTimeHeading" />
+
+        <RadioButton
+            android:id="@+id/tenSecondButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/tenSecondHeader"
+            app:layout_constraintTop_toBottomOf="@+id/delayTimeHeading" />
+
+        <TextView
+            android:id="@+id/noDelayHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/title_no_delay_header"
+            app:layout_constraintEnd_toEndOf="@+id/fiveSecondHeader"
+            app:layout_constraintTop_toBottomOf="@+id/fiveSecondHeader" />
+
+        <RadioButton
+            android:id="@+id/noDelayButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/noDelayHeader"
+            app:layout_constraintTop_toBottomOf="@+id/fiveSecondHeader" />
+
+        <TextView
+            android:id="@+id/customHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="145dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_custom_seconds"
+            app:layout_constraintEnd_toEndOf="@+id/LoginHeader"
+            app:layout_constraintTop_toBottomOf="@+id/noDelayHeader" />
+
+        <EditText
+            android:id="@+id/customDelayEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="175dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/seconds_placeholder"
+            android:imeOptions="actionDone"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLines="1"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/customHeader"
+            app:layout_constraintTop_toBottomOf="@+id/noDelayHeader" />
+
+        <Button
+            android:id="@+id/dailyImageBeginButton"
+            style="@style/primaryButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/primary_button"
+            android:text="@string/begin_button_text"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customDelayEntryBox" />
+
+        <Button
+            android:id="@+id/dailyImageCalibrateButton"
+            style="@style/secondaryButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/secondary_button"
+            android:text="@string/calibrate_camera_button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dailyImageBeginButton" />
+
+        <Button
+            android:id="@+id/dailyImageCancelButton"
+            style="@style/cancelButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/cancel_button"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dailyImageCalibrateButton" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

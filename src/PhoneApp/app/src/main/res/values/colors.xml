@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#505060</color> <!-- using for header area background -->
+    <color name="colorPrimaryDark">#B2B2B2</color> <!-- used for section headings -->
+    <color name="colorBackground">#23232D</color> <!--  -->
+    <color name="colorAccent">#B5830E</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="headerText">#B5830E</color>
+    <color name="headerTextAccent">#EDB024</color> <!-- use for edging of non text regions -->
+    <color name="StandardText">#6E6E78</color>
+    <color name="placeholderText">#6E6E78</color>
+    <color name="textEntryRegion">#191923</color>
+    <color name="textEntryHiLite">#454552</color>
+    <color name="primaryBttnBckgrnd">#497775</color>
+    <color name="prmryBttnHiLite">#91C7C4</color>
+    <color name="secondaryBttnBckgrnd">#0A3542</color>
+    <color name="scndryBttnHiLite">#2A5F6E</color>
+    <color name="cancelBttBckgrnd">#8C4631</color>
+    <color name="cancelBttnHiLite">#CC6748</color>
+    <color name="placeHolderTextBackup">#32323C</color>
+</resources>

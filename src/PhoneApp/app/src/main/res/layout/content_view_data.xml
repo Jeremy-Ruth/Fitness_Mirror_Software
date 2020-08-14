@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.view_data"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:showIn="@layout/activity_view_data">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:background="@drawable/header_line_shadow"
+            android:contentDescription="@string/header_image_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/viewDataHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="81dp"
+            android:text="@string/view_data_header_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/viewDataSingleSectionHeader"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/view_data_single_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataHeader" />
+
+        <TextView
+            android:id="@+id/viewDataSingleImageDataEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/view_data_single_image_data_radio_button_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleSectionHeader" />
+
+        <RadioButton
+            android:id="@+id/viewDataSingleImageDataRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataSingleImageDataEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleSectionHeader" />
+
+        <TextView
+            android:id="@+id/viewDataSingleDataEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/view_data_single_data_radio_button_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleImageDataEntryHeader" />
+
+        <RadioButton
+            android:id="@+id/viewDataSingleDataRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataSingleDataEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleImageDataEntryHeader" />
+
+        <TextView
+            android:id="@+id/viewDataSingleImageEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/view_data_single_image_radio_button_text"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataSingleDataRadio"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleImageDataEntryHeader" />
+
+        <RadioButton
+            android:id="@+id/viewDataSingleImageRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataSingleImageEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleImageDataEntryHeader" />
+
+        <TextView
+            android:id="@+id/viewDataDoubleSectionHeader"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/view_data_double_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSingleDataEntryHeader" />
+
+        <TextView
+            android:id="@+id/viewDataDoubleImageDataEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/view_data_double_image_data_radio_button_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleSectionHeader" />
+
+        <RadioButton
+            android:id="@+id/viewDataDoubleImageDataRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataDoubleImageDataEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleSectionHeader" />
+
+        <TextView
+            android:id="@+id/viewDataDoubleDataEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/view_data_double_data_radio_button_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleImageDataEntryHeader" />
+
+        <RadioButton
+            android:id="@+id/viewDataDoubleDataRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataDoubleDataEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleImageDataEntryHeader" />
+
+        <TextView
+            android:id="@+id/viewDataDoubleImageEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/view_data_double_image_radio_button_text"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataDoubleDataRadio"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleImageDataEntryHeader" />
+
+        <RadioButton
+            android:id="@+id/viewDataDoubleImageRadio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataDoubleImageEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleImageDataEntryHeader" />
+
+        <TextView
+            android:id="@+id/viewDataFirstDateEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/view_data_first_date_header_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleDataEntryHeader" />
+
+        <EditText
+            android:id="@+id/viewDataFirstDateEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/date_placeholder_text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataFirstDateEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataDoubleDataEntryHeader" />
+
+        <TextView
+            android:id="@+id/viewDataSecondDateEntryHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/view_data_second_date_header_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataFirstDateEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataFirstDateEntryHeader" />
+
+        <EditText
+            android:id="@+id/viewDataSecondDataEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/date_placeholder_text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataSecondDateEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataFirstDateEntryHeader" />
+
+        <Button
+            android:id="@+id/viewDataSubmitButton"
+            style="@style/primaryButtonStyle"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/primary_button"
+            android:text="@string/submit_button_text"
+            app:layout_constraintStart_toStartOf="@+id/viewDataFirstDateEntryHeader"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSecondDateEntryHeader" />
+
+        <Button
+            android:id="@+id/viewDataCancelButton"
+            style="@style/cancelButtonStyle"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/cancel_button"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintLeft_toRightOf="@+id/viewDataSubmitButton"
+            app:layout_constraintTop_toBottomOf="@+id/viewDataSecondDateEntryHeader" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

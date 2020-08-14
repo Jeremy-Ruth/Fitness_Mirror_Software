@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.image_time_lapse"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:showIn="@layout/activity_image_time_lapse">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:background="@drawable/header_line_shadow"
+            android:contentDescription="@string/header_image_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/timeLapseHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="81dp"
+            android:text="@string/title_image_time_lapse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerShadow" />
+
+        <TextView
+            android:id="@+id/chooseDateHeader"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_choose_date_range"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeLapseHeader" />
+
+        <TextView
+            android:id="@+id/fromHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_analysis_from_entry_header"
+            app:layout_constraintStart_toStartOf="@+id/timeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/chooseDateHeader" />
+
+        <EditText
+            android:id="@+id/fromDateBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="187dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/date_placeholder_text"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/fromHeader"
+            app:layout_constraintTop_toBottomOf="@+id/chooseDateHeader" />
+
+        <TextView
+            android:id="@+id/toDateHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_analysis_to_entry_header"
+            app:layout_constraintStart_toStartOf="@+id/fromHeader"
+            app:layout_constraintTop_toBottomOf="@+id/fromDateBox" />
+
+        <EditText
+            android:id="@+id/toDateBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="187dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/date_placeholder_text"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/toDateHeader"
+            app:layout_constraintTop_toBottomOf="@+id/fromDateBox" />
+
+        <TextView
+            android:id="@+id/timeIntervalHeader"
+            style="@style/sectionHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_choose_time_interval"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toDateBox" />
+
+        <TextView
+            android:id="@+id/tenSecondTimeLapseHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_10_seconds"
+            app:layout_constraintStart_toStartOf="@+id/timeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/timeIntervalHeader" />
+
+        <RadioButton
+            android:id="@+id/tenSecondTimeLapseButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/tenSecondTimeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/timeIntervalHeader" />
+
+        <TextView
+            android:id="@+id/twentySecondTimeLapseHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_20_seconds"
+            app:layout_constraintLeft_toRightOf="@+id/tenSecondTimeLapseButton"
+            app:layout_constraintTop_toBottomOf="@+id/timeIntervalHeader" />
+
+        <RadioButton
+            android:id="@+id/twentySecondTimeLapseButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/twentySecondTimeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/timeIntervalHeader" />
+
+        <TextView
+            android:id="@+id/sixtySecondTimeLapseHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_60_seconds"
+            app:layout_constraintStart_toStartOf="@+id/tenSecondTimeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/tenSecondTimeLapseHeader" />
+
+        <RadioButton
+            android:id="@+id/sixtySecondTimeLapseButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/user_entry_radio_buttons"
+            android:button="@android:color/transparent"
+            android:text=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintLeft_toRightOf="@+id/sixtySecondTimeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/tenSecondTimeLapseHeader" />
+
+        <TextView
+            android:id="@+id/customTimeLapsHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_custom_seconds"
+            app:layout_constraintStart_toStartOf="@+id/tenSecondTimeLapseHeader"
+            app:layout_constraintTop_toBottomOf="@+id/sixtySecondTimeLapseHeader" />
+
+        <EditText
+            android:id="@+id/customTimeLapseBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="175dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/seconds_placeholder"
+            android:maxLines="1"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/customTimeLapsHeader"
+            app:layout_constraintTop_toBottomOf="@+id/sixtySecondTimeLapseHeader" />
+
+        <Button
+            android:id="@+id/timeLapseSubmitButton"
+            style="@style/primaryButtonStyle"
+            android:layout_width="132dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/primary_button"
+            android:text="@string/submit_button_text"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:layout_constraintStart_toStartOf="@+id/customTimeLapsHeader"
+            app:layout_constraintTop_toBottomOf="@+id/customTimeLapseBox" />
+
+        <Button
+            android:id="@+id/timeLapseCancelButton"
+            style="@style/cancelButtonStyle"
+            android:layout_width="132dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cancel_button"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintLeft_toRightOf="@+id/timeLapseSubmitButton"
+            app:layout_constraintTop_toBottomOf="@+id/customTimeLapseBox" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

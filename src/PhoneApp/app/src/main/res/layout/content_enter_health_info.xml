@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="fitmirrorteam.fitmirrorapp.enterHealthInfo"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:showIn="@layout/activity_enter_health_info">
+
+        <ImageView
+            android:id="@+id/headerShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/header_image_description"
+            android:background="@drawable/header_line_shadow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/enterInfoHeader"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="82dp"
+            android:text="@string/header_health_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerShadow" />
+
+        <TextView
+            android:id="@+id/weightHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="150dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_weight_field"
+            app:layout_constraintEnd_toEndOf="@+id/enterInfoHeader"
+            app:layout_constraintTop_toBottomOf="@+id/enterInfoHeader" />
+
+        <EditText
+            android:id="@+id/weightEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="185dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/weight_hint"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/weightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/enterInfoHeader" />
+
+        <TextView
+            android:id="@+id/bpSystolicHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_bp_systolic_header"
+            app:layout_constraintStart_toStartOf="@+id/weightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/weightHeader" />
+
+        <EditText
+            android:id="@+id/systolicEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/bp_systolic_hint"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/bpSystolicHeader"
+            app:layout_constraintTop_toBottomOf="@+id/weightHeader" />
+
+        <TextView
+            android:id="@+id/bpDiastolicHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/title_bp_diastolic_header"
+            app:layout_constraintEnd_toEndOf="@+id/bpSystolicHeader"
+            app:layout_constraintTop_toBottomOf="@+id/bpSystolicHeader" />
+
+        <EditText
+            android:id="@+id/diastolicEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/bp_diastolic_hint"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/bpDiastolicHeader"
+            app:layout_constraintTop_toBottomOf="@+id/bpSystolicHeader" />
+
+        <TextView
+            android:id="@+id/temperatureHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/title_temperature_header"
+            app:layout_constraintStart_toStartOf="@+id/weightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/bpDiastolicHeader" />
+
+        <EditText
+            android:id="@+id/temperatureEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/temperature_hint"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/temperatureHeader"
+            app:layout_constraintTop_toBottomOf="@+id/bpDiastolicHeader" />
+
+        <TextView
+            android:id="@+id/heartRateHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_heart_rate_header"
+            app:layout_constraintStart_toStartOf="@+id/weightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureHeader" />
+
+        <EditText
+            android:id="@+id/heartRateEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/heart_rate_hint"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/heartRateHeader"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureHeader" />
+
+        <TextView
+            android:id="@+id/bmiHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/title_bmi_header"
+            app:layout_constraintStart_toStartOf="@+id/weightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/heartRateHeader" />
+
+        <EditText
+            android:id="@+id/bmiHeaderBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="187dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:hint="@string/bmi_range"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/bmiHeader"
+            app:layout_constraintTop_toBottomOf="@+id/heartRateHeader" />
+
+        <TextView
+            android:id="@+id/dateHeader"
+            style="@style/entryHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_single_date_header"
+            app:layout_constraintStart_toStartOf="@+id/weightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/bmiHeader" />
+
+        <EditText
+            android:id="@+id/dateEntryBox"
+            style="@style/placeholderTextStyle"
+            android:layout_width="187dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_entry_boxes"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/date_placeholder_text"
+            android:maxLines="1"
+            android:inputType="date"
+            app:layout_constraintLeft_toRightOf="@+id/dateHeader"
+            app:layout_constraintTop_toBottomOf="@+id/bmiHeader" />
+
+        <Button
+            android:id="@+id/submitButton_enterHealth"
+            style="@style/primaryButtonStyle"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/primary_button"
+            android:text="@string/submit_button_text"
+            app:layout_constraintStart_toStartOf="@+id/dateHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+
+        <Button
+            android:id="@+id/cancelButton_enterHealth"
+            style="@style/cancelButtonStyle"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/cancel_button"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintLeft_toRightOf="@+id/submitButton_enterHealth"
+            app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
